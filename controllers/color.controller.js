@@ -4,19 +4,14 @@ const color = require("../services/color.service");
 
 // routes
 
-router.get("/",get);
+router.get("/", get);
 module.exports = router;
 
 function get(req, res, next) {
-  color.getPlatformWise(req.query)
-    .then((message) =>
-      res.json(
-        message      
-      )
-    )
-    .catch(err => {     
+  color
+    .getPlatformWise(req.query)
+    .then((message) => res.json(message))
+    .catch((err) => {
       next(err);
     });
 }
-
-

@@ -9,14 +9,10 @@ router.post("/add", add);
 module.exports = router;
 
 function add(req, res, next) {
-  feedbackService.add(req)
-    .then((message) =>
-      res.json(
-        message      
-      )
-    )
-    .catch(err => {     
+  feedbackService
+    .add(req)
+    .then((message) => res.json(message))
+    .catch((err) => {
       next(err);
     });
 }
-

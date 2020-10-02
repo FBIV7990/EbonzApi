@@ -1,5 +1,5 @@
-var router = require('express').Router();
-const jwt= require("../_helpers/jwt");
+var router = require("express").Router();
+const jwt = require("../_helpers/jwt");
 // split up route handling
 router.use(jwt());
 router.use("/users", require("./user.controller"));
@@ -18,8 +18,8 @@ router.use("/contactus", require("./contactUs.controller"));
 router.use("/career", require("./career.controller"));
 router.use("/locations", require("./location.controller"));
 router.use("/slider", require("./slider.controller"));
-router.use("/color",require("./color.controller"));
-router.use("/enquiry",require("./email.controller"));
+router.use("/color", require("./color.controller"));
+router.use("/enquiry", require("./email.controller"));
 // etc.
 
 module.exports = router;

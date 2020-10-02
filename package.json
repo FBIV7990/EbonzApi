@@ -7,7 +7,7 @@
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Pradeep",
+  "author": "Ebonz",
   "license": "ISC",
   "dependencies": {
     "@hapi/joi": "^15.1.0",

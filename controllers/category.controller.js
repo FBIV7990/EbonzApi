@@ -11,18 +11,15 @@ module.exports = router;
 
 /////////////////////////////////////
 function getAll(req, res, next) {
-    categoryService
+  categoryService
     .getAll()
-    .then(categories => res.json(
-        categories
-        ))
-    .catch(err => next(err));
+    .then((categories) => res.json(categories))
+    .catch((err) => next(err));
 }
 
 function getById(req, res, next) {
-    categoryService
+  categoryService
     .getById(req.params.id)
-    .then(category => (category ? res.json(
-       category) : res.sendStatus(404)))
-    .catch(err => next(err));
+    .then((category) => (category ? res.json(category) : res.sendStatus(404)))
+    .catch((err) => next(err));
 }
